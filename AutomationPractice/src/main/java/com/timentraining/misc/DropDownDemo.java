@@ -21,7 +21,7 @@ public class DropDownDemo {
 		driver.get("http://timeandtraining.net/seleniumdemo/selenium.html");
 		WebElement dropdown = driver.findElement(By.xpath("(//select[@name='DemoDropDown'])[1]"));
 		Select languangeDropDrown = new Select(dropdown);
-		languangeDropDrown.selectByValue("3");
+		languangeDropDrown.selectByValue("3");//
 		
 		
 		
