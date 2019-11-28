@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!-- <!DOCTYPE suite SYSTEM "testng-1.0.dtd" > -->
+
+
+<suite name="order test suite">
+<test name="run with chrome">
+	<parameter name="browser" value="chrome"/>
+	
+		<!-- <packages>
+			<package name="com.timentraining.misc.parallel">
+			</package>
+		</packages> -->
+		
+		<classes>
+		<class name="com.timentraining.misc.parallel.AddingNewProfileTests"></class>
+		</classes>
+			
+	</test>
+	
+	
+<test name="run with ie">
+	<parameter name="browser" value="ie"/>
+	
+		<!-- <packages>
+			<package name="com.timentraining.misc.parallel">
+			</package>
+		</packages> -->
+		
+		<classes>
+		<class name="com.timentraining.misc.parallel.AddingNewProfileTests"></class>
+		</classes>
+			
+	</test>
+	
+</suite>

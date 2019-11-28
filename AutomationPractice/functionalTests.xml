@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE suite SYSTEM "testng-1.0.dtd"> -->
+
+<suite name="functional test suite">
+	<test name="all functional tests">
+		
+		<groups>
+		<run>
+		<include name="functional"></include>
+		</run>
+		</groups>
+
+
+	<packages>
+	<package name="com.auto.*"></package>
+
+	
+	</packages>	
+
+	</test>
+</suite>

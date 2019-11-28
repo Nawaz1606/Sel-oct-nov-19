@@ -1,17 +1,39 @@
 package com.automationpractice.login;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.automationpractice.framework.TestBase;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
+import com.automationpractice.framework.UI;
+import com.automationpractice.framework.Utility;
 
 public class LogInTests extends TestBase{
 	
+	@Test
+	public void login_with_invalid_userid_001___UI() {
+		//Go to http://www.automationpractice.com
+		UI ui = new UI(driver);
+		ui.openURL("http://automationpractice.com/index.php");
+		
+		//Click Sign in button 
+		ui.clickByClass("login");
+		
+		//Enter invalid email address 
+		ui.sendKeysByID("email", "abc@yahoo.com");
+		
+		//Click Sign in button
+		ui.clickById("SubmitLogin");
+		
+		
+		//Verify error message displayed 'Create and Account'
+		String createAccount = driver.findElement(By.xpath("//h3[text()='Create an account']")).getText();
+		Assert.assertEquals(createAccount, "CREATE AN ACCOUNT");
+		
+		ui.takeScreenshot();
+		
+		
+	}
 	@Test
 	public void login_with_invalid_userid_001() {
 	

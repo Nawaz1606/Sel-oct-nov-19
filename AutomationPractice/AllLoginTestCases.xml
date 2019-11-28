@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+ 
+<suite name="Login test suite">
+ 
+ 
+  <test name="login test with chrome browser"   >
+    <packages>
+      <package name="com.automationpractice.login" />
+   </packages>
+ </test>
+ 
+ 
+</suite>

@@ -1,0 +1,14 @@
+<suite name="Suite1" verbose="1" >
+  <test name="Update profile test cases">
+    <classes>
+	      <class name="com.auto.tcs.profile.UpdatingProfileTests">
+	      
+	      		<methods>
+		        <exclude name="updateProfile3" />
+		      </methods>
+
+	      	
+	      </class>
+    </classes>
+  </test>
+</suite>

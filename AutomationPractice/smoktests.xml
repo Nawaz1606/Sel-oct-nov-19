@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE suite SYSTEM "testng-1.0.dtd"> -->
+
+<suite name="smoke test suite">
+	<test name="all smoke tests">
+	<parameter name="orderId" value="52154"></parameter>
+	
+	<parameter name="orderId2" value="369258"></parameter>
+	<parameter name="itemNumber" value="4"></parameter>
+	
+		
+		<groups>
+		<run>
+		<include name="smoke"></include>
+		</run>
+		</groups>
+
+	<!-- 	<classes>
+			<class name="com.auto.tcs.order.CanceledOrderTests"></class>
+			<class name="com.auto.tcs.order.ReviewOrderTests"></class>
+		</classes> -->
+	<packages>
+	<package name="com.auto.*"></package>
+
+	
+	</packages>	
+
+	</test>
+</suite>

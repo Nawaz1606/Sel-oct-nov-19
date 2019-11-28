@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "testng-1.0.dtd" >
+
+
+<suite name="order test suite">
+	<test name="canceled and review order tests">
+		<classes>
+		
+			<class name="com.auto.tcs.order.CanceledOrderTests"></class>
+			<class name="com.auto.tcs.order.ReviewOrderTests"></class>
+		</classes>
+	</test>
+	
+
+	
+</suite>

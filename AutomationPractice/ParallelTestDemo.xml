@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!-- <!DOCTYPE suite SYSTEM "testng-1.0.dtd" > -->
+
+
+<suite name="order test suite" parallel="classes" thread-count="3">
+	<test name="canceled and review order tests">
+	
+		<packages>
+			<package name="com.timentraining.misc.parallel">
+			</package>
+		</packages>
+		
+			
+	</test>
+	
+</suite>

@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+ 
+<suite name="Functional Test suite" verbose="1" >
+  
+  
+  <test name="online purchase test cases"   >
+    
+    <classes>
+    	<class name="com.auto.tcs.purchase.OnlinePurchaseTests"></class>
+    </classes>
+    
+ </test>
+
+ 
+   <test name="store purchase test cases"   >
+   <classes>
+    	<class name="com.auto.tcs.purchase.StorePurchaseTests"></class>
+    </classes>
+ </test>
+ 
+ 
+</suite>

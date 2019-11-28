@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE suite SYSTEM "testng-1.0.dtd"> -->
+
+<suite name="functional and smoke test suite">
+	<test name="all functional and smoke tests">
+		
+		<groups>
+		<run>
+		<include name="functional"></include>
+		<include name="smoke"></include>
+		</run>
+		</groups>
+
+
+	<packages>
+	<package name="com.auto.*"></package>
+
+	
+	</packages>	
+
+	</test>
+</suite>

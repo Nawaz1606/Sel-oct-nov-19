@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "testng-1.0.dtd" >
+
+
+<suite name="order test suite">
+	
+	<test name="canceled and review order tests">
+	<parameter name="loanAmount" value="375000"/>
+	<parameter name="downPayment" value="23000"/>
+	<parameter name="length" value="15"/>
+	<parameter name="interestRate" value="3.10"/>
+		<classes>
+		
+			<class name="com.java.TestNGDataProvider"></class>
+		</classes>
+	</test>
+	
+	
+
+	
+</suite>
