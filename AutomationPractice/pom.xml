@@ -65,7 +65,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
-						<suiteXmlFile>AllLoginTestCases.xml</suiteXmlFile>
+						<suiteXmlFile>RegressionTests.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
