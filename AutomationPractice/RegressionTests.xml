@@ -6,7 +6,8 @@
   <test name="all test cases to run"   >
  
     <packages>
-      <package name="com.automationpractice.login" />      
+      <package name="com.automationpractice.login" />
+      <package name="com.automationpractice.other" />      
       
    </packages>
  </test>
