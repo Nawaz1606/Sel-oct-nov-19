@@ -1,11 +1,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
  
+
 <suite name="Regression test suite" verbose="1" >
+
   <test name="all test cases to run"   >
+ 
     <packages>
-      <package name="com.auto.tcs.order" />
-      <package name="com.auto.tcs.profile" />
-      <package name="com.auto.tcs.purchase" />
+      <package name="com.automationpractice.login" />      
+      
    </packages>
  </test>
 </suite>
