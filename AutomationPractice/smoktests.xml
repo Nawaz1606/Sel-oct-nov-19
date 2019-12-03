@@ -15,10 +15,10 @@
 		</run>
 		</groups>
 
-	<!-- 	<classes>
+	<classes>
 			<class name="com.auto.tcs.order.CanceledOrderTests"></class>
 			<class name="com.auto.tcs.order.ReviewOrderTests"></class>
-		</classes> -->
+		</classes>
 	<packages>
 	<package name="com.auto.*"></package>
 

@@ -6,17 +6,43 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+
+@Listeners(TestNGListener.class)
 public class TestBase {
 	
-	 protected WebDriver driver;
+	 protected EventFiringWebDriver driver;
 	 protected UI ui;
+	 
+	 
+	 @BeforeSuite
+	 public void beforeSuite() {
+		 ExtentManager.getInstance();
+	 }
+	 
+	 
+	 @AfterSuite
+	 public void afterSuite() {
+		 ExtentManager.reporter.flush();
+	 }
+	 
+	
+	/*
+	 * @BeforeClass public void beforeClass() {
+	 * ExtentManager.reporter.createTest(" test class"); }
+	 */
+	 
 		
 	@BeforeMethod
 	@Parameters({"browser"})
@@ -27,15 +53,15 @@ public class TestBase {
 		
 		if (browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			driver = new EventFiringWebDriver(new ChromeDriver());
 		}else if(browser.equals("ie")) {
 			WebDriverManager.iedriver().setup();
-			driver = new InternetExplorerDriver();
+			driver = new EventFiringWebDriver(new InternetExplorerDriver());
 		}
 		
 
 		
-		
+		driver.register(new WebDriverListener());
 		
 		driver.manage().window().setPosition(new Point(1917, 0));
 		driver.manage().window().maximize();

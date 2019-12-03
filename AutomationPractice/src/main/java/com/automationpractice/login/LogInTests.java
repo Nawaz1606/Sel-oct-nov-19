@@ -6,9 +6,17 @@ import org.testng.annotations.Test;
 
 import com.automationpractice.framework.TestBase;
 import com.automationpractice.framework.UI;
-import com.automationpractice.framework.Utility;
 
 public class LogInTests extends TestBase{
+	
+	
+	@Test
+	public void myNewTest() {
+		ui.openURL("http://www.amazon.com");
+		ui.clickByXpath("//a[text()='Sign in securely']");
+		ui.clickByXpath("//a[contains(text(),'Create your Amazon account')]");
+	}
+	
 	
 	@Test
 	public void login_with_invalid_userid_001___UI() {
@@ -53,7 +61,6 @@ public class LogInTests extends TestBase{
 		Assert.assertEquals(createAccount, "CREATE AN ACCOUNT");
 		
 	}
-	
 	@Test
 	public void Login_with_valid_userid_and_password_003() {
 		

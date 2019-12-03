@@ -45,6 +45,7 @@ public class UI{
 	
 	
 	public void openURL(String url) {
+		
 		d.get(url);
 	}
 	
@@ -66,26 +67,38 @@ public class UI{
 	}
 	public void clickByXpath(String xpath) {
 		highlight(d.findElement(By.xpath(xpath))).click();
+		
 	}
 	public void clickByName(String name) {
 		highlight(d.findElement(By.xpath(name))).click();
 	}
 	public void clickByCssSelector(String css) {
 		highlight(d.findElement(By.cssSelector(css))).click();
+		
 	}
 	
 	//
 	
 	
 	//SEND KEYS
+	
+	private void sendKeysByElement(WebElement e, String textToType) {
+		highlight(e);
+		e.sendKeys(textToType);
+		ExtentManager.step.info("Typed: "+ textToType);
+	}
+		
 	public void sendKeysByID(String id, String textToType) {
-		highlight(d.findElement(By.id(id))).sendKeys(textToType);
+		//
+		sendKeysByElement(d.findElement(By.id(id)),textToType);
 	}
 	public void sendKeysByClass(String className, String textToType) {
-		highlight(d.findElement(By.className(className))).sendKeys(textToType);
+		//
+		sendKeysByElement(d.findElement(By.className(className)),textToType);
 	}
 	public void sendKeysByXpath(String xpath, String textToType) {
-		highlight(d.findElement(By.xpath(xpath))).sendKeys(textToType);
+		//
+		sendKeysByElement(d.findElement(By.xpath(xpath)),textToType);
 	}
 	
 	//
