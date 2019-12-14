@@ -14,4 +14,9 @@ public class Base {
 	public void beforeEachTest() {
 		System.out.println("reporting test set running");
 	}
+	
+	
+	public void newM() {
+		//
+	}
 }
